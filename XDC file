@@ -1,0 +1,17 @@
+## Clock (100MHz Oscillator)
+set_property PACKAGE_PIN W5 [get_ports clk]							
+set_property IOSTANDARD LVCMOS33 [get_ports clk]
+
+## Reset (Switch 0)
+set_property PACKAGE_PIN V17 [get_ports rst_n]					
+set_property IOSTANDARD LVCMOS33 [get_ports rst_n]
+
+## 3-Bit Count Output (LEDs 0, 1, and 2)
+set_property PACKAGE_PIN U16 [get_ports {q_out[0]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {q_out[0]}]
+
+set_property PACKAGE_PIN E19 [get_ports {q_out[1]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {q_out[1]}]
+
+set_property PACKAGE_PIN U19 [get_ports {q_out[2]}]					
+set_property IOSTANDARD LVCMOS33 [get_ports {q_out[2]}]
