@@ -1,0 +1,23 @@
+// 3-Bit Synchronous Up-Counter
+// This module increments from 000 to 111 and rolls over to 000.
+
+module counter_3bit (
+    input  wire       clk,   // System Clock
+    input  wire       rst_n, // Active-Low Asynchronous Reset
+    output reg  [2:0] count  // 3-bit Output (MSB to LSB)
+);
+
+    // Sequential logic for the counter
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            // Asynchronous reset: Clear the counter to 000
+            count <= 3'b000;
+        end else begin
+            // On every clock edge, increment the count by 1
+            // The modulo-8 behavior (0-7) happens automatically 
+            // because the register is only 3 bits wide.
+            count <= count + 1'b1;
+        end
+    end
+
+endmodule
