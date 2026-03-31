@@ -1,0 +1,10 @@
+Clock Pulse     Current State  Next State    Decimal Equivalent
+                 (Q2 ​Q1 ​Q0​)    (Q2 ​Q1 ​Q0​)      
+0                   000           001                 0
+1                   001           010                 1 
+2                   010           011                 2
+3                   011           100                 3
+4                   100           101                 4 
+5                   101           110                 5
+6                   110           111                 6
+7                   111           000                 7 (Roll-over)
